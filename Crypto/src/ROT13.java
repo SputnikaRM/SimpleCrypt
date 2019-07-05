@@ -83,21 +83,25 @@ public class ROT13  {
     public static String rotate(String s, Character c) {
 
 
-     Integer rotate= c-s.charAt(0);
-        StringBuilder encrypt = new StringBuilder();
+//     Integer rotate= c-s.charAt(0);
+//        StringBuilder encrypt = new StringBuilder();
+//
+//        for (int x=0; x<s.length();x++){
+//            if(isUpperCase(s.charAt(x))){
+//                char ch = (char)(((int)s.charAt(x)+  rotate-65) % 26 +65);
+//                encrypt.append(ch);
+//            }
+//            else {
+//                char ch = (char)(((int)s.charAt(x) + rotate-97)% 26+97);
+//
+//                encrypt.append(ch);
+//            }
+//        }
+//        return encrypt.toString();
+        Integer rotate = s.indexOf(c);
 
-        for (int x=0; x<s.length();x++){
-            if(isUpperCase(s.charAt(x))){
-                char ch = (char)(((int)s.charAt(x)+  rotate-65) % 26 +65);
-                encrypt.append(ch);
-            }
-            else {
-                char ch = (char)(((int)s.charAt(x) + rotate-97)% 26+97);
-
-                encrypt.append(ch);
-            }
-        }
-        return encrypt.toString();
+       String x= s.substring(rotate) + s.substring(0, rotate);
+       return x;
 
 
     }
