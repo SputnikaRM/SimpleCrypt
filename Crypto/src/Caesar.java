@@ -1,5 +1,5 @@
 package Crypto.src;
 
-public class Caesar implements ROT13 {
+public class Caesar extends ROT13 {
     // rotate by 5
 }
