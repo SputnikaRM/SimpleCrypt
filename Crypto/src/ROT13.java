@@ -21,7 +21,7 @@ public class ROT13  {
 
     public String crypt(String text) throws UnsupportedOperationException {
 
-        return "";
+        return text;
     }
 
     public String encrypt(String text) {
@@ -62,7 +62,7 @@ public class ROT13  {
                     encrypt.append(ch);
                 }
                 else {
-                    char ch = (char)(((int)text.charAt(x) + rotate-97)% 26+97);
+                    char ch = (char)(((int)text.charAt(x) + rotate-97)% 26 + 97);
 
                     encrypt.append(ch);
                 }
