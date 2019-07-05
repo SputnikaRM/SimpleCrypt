@@ -35,8 +35,7 @@ public class ROT13  {
 
     public static String rotate(String s, Character c) {
 
-     Integer rotate=13;
-
+     Integer rotate= c-s.charAt(0);
         StringBuilder encrypt = new StringBuilder();
 
         for (int x=0; x<s.length();x++){
